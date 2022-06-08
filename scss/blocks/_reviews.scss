@@ -1,0 +1,105 @@
+.reviews {
+    padding: 40px 0 80px;
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 45px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+    }
+    &-slider {
+        &__item {
+            max-width: 731px;
+            margin: 45px auto 0;
+            background-color: #fff;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 62px 30px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url(../images/quote-left.svg);
+                width: 70px;
+                height: 47px;
+                left: 64px;
+                top: 13px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                background-image: url(../images/quote-right.svg);
+                width: 70px;
+                height: 47px;
+                top: 118px;
+                right: 60px;
+            }
+        }
+        &__button {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 10px;
+            background-position: center;
+            top: 50%;
+            cursor: pointer;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            border: none;
+            background-color: transparent;
+            z-index: 11;
+            &--prev {
+                background-image: url(../images/arrow-prev-secondary.svg);
+                left: 0;
+            }
+            &--next {
+                background-image: url(../images/arrow-next-secondary.svg);
+                right: 0;
+            }
+        }
+        &__profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -45px;
+            margin-bottom: 30px;
+        }
+        &__avatar {
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            margin-bottom: 9px;
+        }
+        &__username {
+            margin: 0;           
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            color: $primary;
+            padding-bottom: 10px;
+        }
+        &__date {
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 13px;
+            padding-bottom: 4px;
+            color: #000;
+        }
+        &__rating {
+            display: flex;
+            align-items: center;
+        }
+        &__text {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 160%;
+            text-align: center;
+            max-width: 537px;
+            margin: auto;
+        }
+    }
+}
